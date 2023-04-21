@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0';
+
 :root{
     --primary:#212529;
     --component:#3a4046;
@@ -12,4 +14,9 @@
 *{
     margin:0;
     padding:0;
+}
+
+body{
+    background-color: var(--primary);
+    color:var(--foreground1)
 }
