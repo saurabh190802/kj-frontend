@@ -1,0 +1,43 @@
+.navbar{
+    background-color: var(--primary);
+    color: var(--foreground2);
+    padding:10px 30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_nav a{
+    text-decoration:none;
+    color:var(--foreground2);
+    font-size:20px;
+}
+
+.right_nav a{
+    text-decoration:none;
+    font-size:16px;
+    color:var(--foreground2);
+    padding:5px 10px;
+    margin-left:5px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.right_nav a:hover{
+    background-color: var(--component);
+}
+
+
+.active{
+    background-color: var(--component);
+}
+
+
+@media screen and (max-width:700px) {
+    .navbar{
+        flex-direction:column;
+    }
+
+    .right_nav{
+        padding:15px;
+    }
+}
