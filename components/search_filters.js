@@ -18,7 +18,7 @@ export default function SearchFilters({currentFilter,setCurrentFilter}){
         <div className={styles.search_filter_container}>
             <div className={styles.filter_inner_container}>
                 <div className={styles.filterIcon}>
-                    <span class="material-symbols-outlined" onClick={toggleSearchFilter}>
+                    <span className="material-symbols-outlined" onClick={toggleSearchFilter}>
                         tune
                     </span>
                 </div>

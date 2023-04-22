@@ -6,7 +6,7 @@ import {getDefaultSearchFilters} from '@/utils/utils_search_filters.js'
 export default function Search(){
     const [currentFilter, setCurrentFilter] = useState(getDefaultSearchFilters())
     return (
-        <div style={{display:'flex',flexDirection:'column',alignItems:'center',maxWidth:'500px;'}}>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
             <div className={styles.search_component}>
                 <div>
                     <form action="">
