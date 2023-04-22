@@ -1,8 +1,10 @@
 .search_filter_container{
-    display:flex;
+    /*display:flex;
     justify-content: center;
     margin:20px;
-    width:100%;
+    width:100%;*/
+    margin-top:10px;
+    
 }
 
 .search_filter{
@@ -10,10 +12,12 @@
     justify-content: space-between;
     border:solid 2px var(--border);
     border-radius:10px;
+   
 }
 
 .filter_inner_container{
-    width:600px;
+    width:585px;
+    margin-left:29px;
 }
 
 .filter_group{
