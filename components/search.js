@@ -1,7 +1,10 @@
 import styles from '@/styles/Search.module.css'
 import SearchFilters from './search_filters'
+import { useState } from 'react'
+import {getDefaultSearchFilters} from '@/utils/utils_search_filters.js'
 
 export default function Search(){
+    const [currentFilter, setCurrentFilter] = useState(getDefaultSearchFilters())
     return (
         <div>
             <div className={styles.search_component}>
@@ -9,14 +12,17 @@ export default function Search(){
                     <form action="">
                         <input type="text" placeholder='Search' />
                         <button type="submit">
-                            <span class="material-symbols-outlined">
+                            <span className="material-symbols-outlined">
                                 search
                             </span>
                         </button>
                     </form>
                 </div>
             </div>
-            <SearchFilters />
+            <SearchFilters 
+                currentFilter={currentFilter} 
+                setCurrentFilter={setCurrentFilter}
+            />
         </div>
     )
 }

@@ -6,12 +6,12 @@ import { useRouter } from 'next/router';
 export default function Navbar(){
 
     const [links,setLinks] = useState([
-        ['Home','/'], // true tells that the current link is active
+        ['Home','/'],
         ['About','/about'],
-        ['Report Issue','/issue'],
+        ['Report Issue','/report-issue'],
     ])
 
-    const { pathname } = useRouter();
+    const { pathname } = useRouter();  // pathname is used to check whether the current link is active
 
 
     return (
