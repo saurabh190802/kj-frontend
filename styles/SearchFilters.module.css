@@ -1,0 +1,40 @@
+.search_filter_container{
+    display:flex;
+    justify-content: center;
+    margin:20px;
+    width:100%;
+}
+
+.search_filter{
+    display:flex;
+    justify-content: space-between;
+    border:solid 2px var(--border);
+    border-radius:10px;
+}
+
+.filter_inner_container{
+    width:600px;
+}
+
+.filter_group{
+    margin:10px 30px;
+}
+
+.filter_title{
+    text-transform:capitalize;
+    color:var(--foreground2);
+    cursor:default;
+}
+
+.filter_items > * {
+    cursor:pointer;
+}
+
+.current_filter{
+    color:green;
+}
+
+.filterIcon > span{
+    cursor:pointer;
+    user-select: none;
+}
