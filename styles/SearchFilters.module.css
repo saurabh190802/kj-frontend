@@ -28,6 +28,7 @@
 
 .filter_items > * {
     cursor:pointer;
+    margin-top:10px;
 }
 
 .current_filter{
@@ -37,4 +38,20 @@
 .filterIcon > span{
     cursor:pointer;
     user-select: none;
+    margin-left:10px
+}
+
+@media screen and (max-width:650px) {
+    .filter_inner_container{
+        max-width:400px;
+    }
+    .search_filter{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .filter_inner_container{
+        max-width:300px;
+    }
 }

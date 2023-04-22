@@ -31,3 +31,16 @@
     padding:1.3px;
     cursor:pointer;
 }
+
+
+@media screen and (max-width:650px) {
+    .search_component input[type="text"]{
+        width:400px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .search_component input[type="text"]{
+        width:300px;
+    }
+}
