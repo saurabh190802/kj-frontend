@@ -9,7 +9,7 @@ export default function Search(){
         <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
             <div className={styles.search_component}>
                 <div>
-                    <form action="">
+                    <form action="" style={{display:"flex"}}>
                         <input type="text" placeholder='Search' />
                         <button type="submit">
                             <span className="material-symbols-outlined">
