@@ -12,8 +12,8 @@
 }
 
 .filter_inner_container{
-    width:585px;
-    margin-left:29px;
+    width:570px;
+    margin-left:10px;
 }
 
 .filter_group{
@@ -38,12 +38,11 @@
 .filterIcon > span{
     cursor:pointer;
     user-select: none;
-    margin-left:10px
 }
 
 @media screen and (max-width:650px) {
     .filter_inner_container{
-        max-width:400px;
+        max-width:435px;
     }
     .search_filter{
         flex-direction: column;
@@ -52,6 +51,6 @@
 
 @media screen and (max-width:450px) {
     .filter_inner_container{
-        max-width:300px;
+        max-width:335px;
     }
 }
