@@ -14,6 +14,36 @@ export default function SearchFilters({currentFilter,setCurrentFilter}){
         setfilterDisplay((prev) => prev === 'none' ? 'flex' : 'none')
     }
 
+    function diplayFilterItem(key){
+        return (
+            searchTypes[key].map((element,idx2) => {
+                return (
+                    currentFilter[key] === element 
+                    ? <p key={idx2} className={styles.current_filter}>{element}</p>
+                    : <p key={idx2} onClick={() => changeCurrentFilter(key,element)}>{element}</p>
+                    
+                )
+            })
+        )
+    }
+
+    function displayFilterGroup(){
+        return(
+            Object.keys(searchTypes).map((key,index) => {
+                return (
+                    <div key={index} className={styles.filter_group}>
+                        <div className={styles.filter_title}>
+                            <span>{key.replace("_", " ")}</span>
+                        </div>
+                        <div className={styles.filter_items}>
+                            {diplayFilterItem(key)}
+                        </div>
+                    </div>
+                )
+            })
+        )
+    }
+
     return (
         <div className={styles.search_filter_container}>
             <div className={styles.filter_inner_container}>
@@ -23,25 +53,7 @@ export default function SearchFilters({currentFilter,setCurrentFilter}){
                     </span>
                 </div>
                 <div className={styles.search_filter} style={{display:filterDisplay}}>
-                {Object.keys(searchTypes).map((key,index) => {
-                    return (
-                        <div key={index} className={styles.filter_group}>
-                            <div className={styles.filter_title}>
-                                <span>{key.replace("_", " ")}</span>
-                            </div>
-                            <div className={styles.filter_items}>
-                                {searchTypes[key].map((element,idx2) => {
-                                    return (
-                                        currentFilter[key] === element 
-                                        ? <p key={idx2} className={styles.current_filter}>{element}</p>
-                                        : <p key={idx2} onClick={() => changeCurrentFilter(key,element)}>{element}</p>
-                                        
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        )
-                    })}
+                    {displayFilterGroup()}
                 </div>
             </div>
             
