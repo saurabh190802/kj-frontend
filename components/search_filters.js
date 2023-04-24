@@ -4,7 +4,8 @@ import { useState } from "react";
 
 export default function SearchFilters({ currentFilter, setCurrentFilter }) {
   const [filterDisplay, setfilterDisplay] = useState("none");
-  const [filterButtonColor, setfilterButtonColor] = useState("grey");
+  const [filterButtonColor, setfilterButtonColor] =
+    useState("var(--foreground1)");
 
   function changeCurrentFilter(key, value) {
     setCurrentFilter((prev) => ({ ...prev, [key]: value }));
@@ -12,7 +13,11 @@ export default function SearchFilters({ currentFilter, setCurrentFilter }) {
 
   function toggleSearchFilter() {
     setfilterDisplay((prev) => (prev === "none" ? "flex" : "none"));
-    setfilterButtonColor((prev) => (prev === "white" ? "grey" : "white"));
+    setfilterButtonColor((prev) =>
+      prev === "var(--foreground2)"
+        ? "var(--foreground1)"
+        : "var(--foreground2)"
+    );
   }
 
   function diplayFilterItem(key) {
